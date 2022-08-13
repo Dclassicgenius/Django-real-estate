@@ -172,3 +172,5 @@ logging.config.dictConfig(
         },
     }
 )
+
+AUTH_USER_MODEL = 'users.User'
