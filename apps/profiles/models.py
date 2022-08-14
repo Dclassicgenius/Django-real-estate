@@ -18,7 +18,7 @@ class Gender(models.TextChoices):
 class Profile(TimeStampedUUIDModel):
     user = models.OneToOneField(User, related_name="profile", on_delete=models.CASCADE)
     phone_number = PhoneNumberField(
-        verbose_name=_("Phone Number"), max_length=30, default="+41524204242"
+        verbose_name=_("Phone Number"), max_length=30, default="+79111234567"
     )
     about_me = models.TextField(
         verbose_name=_("About me"), default="say something about yourself"
@@ -36,12 +36,12 @@ class Profile(TimeStampedUUIDModel):
         max_length=20,
     )
     country = CountryField(
-        verbose_name=_("Country"), default="KE", blank=False, null=False
+        verbose_name=_("Country"), default="RU", blank=False, null=False
     )
     city = models.CharField(
         verbose_name=_("City"),
         max_length=180,
-        default="Nairobi",
+        default="Moscow",
         blank=False,
         null=False,
     )
