@@ -1,4 +1,3 @@
-
 from django.contrib.auth import get_user_model
 from rest_framework import permissions, status
 from rest_framework.decorators import api_view, permission_classes
@@ -9,6 +8,7 @@ from apps.profiles.models import Profile
 from .models import Rating
 
 User = get_user_model()
+
 
 @api_view(["POST"])
 @permission_classes([permissions.IsAuthenticated])
